@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY',
                             "4vy!^3(_22#5)qiqp@61$kp2fof+4*h%el^k-f+5v)c-wk2qjf")
 
-# Use env setting if available, otherwise make debug false                               
+# Use env setting if available, otherwise make debug false
 DEBUG = bool(int(os.environ.get('DJANGO_DEBUG', '0')))
 
 ALLOWED_HOSTS = []
@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'bootstrap4',
     'rest_framework',
     'api',
-    'mathstack'
+    'mathstack',
+    'question_creation'
 ]
 
 MIDDLEWARE = [

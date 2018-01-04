@@ -17,10 +17,12 @@ from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
 from mathstack import views as mathstack_views
+from question_creation import views as question_creation_views
 
 urlpatterns = [
     path('api/', include('api.urls')),
     path('admin/', admin.site.urls),
     path('math/div/', mathstack_views.BoolAnswerCreateView.as_view(), name='bool_answer_create'),
+    path('math/input/', question_creation_views.ShortAnswerQuestionCreateView.as_view(), name='short_ans_create'),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
